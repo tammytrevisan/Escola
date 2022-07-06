@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "312c3f5c-a409-4c0f-b19c-92fa019f80c0",
+		"name": "Escola",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21638687"
+	},
+	"item": [
+		{
+			"name": "Todos Alunos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://escola20220703200801.azurewebsites.net/api/aluno",
+					"protocol": "https",
+					"host": [
+						"escola20220703200801",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"aluno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Todas as turmas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7188/api/turma",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7188",
+					"path": [
+						"api",
+						"turma"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Um aluno por ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://escola20220703200801.azurewebsites.net/api/aluno/3",
+					"protocol": "https",
+					"host": [
+						"escola20220703200801",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"aluno",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Uma turma por ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"nome\": \"Leão\",\r\n  \"ativo\": true\r\n}"
+				},
+				"url": {
+					"raw": "https://escola20220703200801.azurewebsites.net/api/turma/1",
+					"protocol": "https",
+					"host": [
+						"escola20220703200801",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"turma",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleta um aluno",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://escola20220703200801.azurewebsites.net/api/aluno/3",
+					"protocol": "https",
+					"host": [
+						"escola20220703200801",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"aluno",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleta uma turma",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://escola20220703200801.azurewebsites.net/api/turma/1",
+					"protocol": "https",
+					"host": [
+						"escola20220703200801",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"turma",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Alunos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Gleison Melo\",\r\n  \"dataNascimento\": \"1980-10-28T22:06:55.828Z\",\r\n  \"sexo\": \"M\",\r\n  \"turmaId\": 0,\r\n  \"totalFaltas\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7188/api/aluno",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7188",
+					"path": [
+						"api",
+						"aluno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar turmas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Tammy Trevisan\",\r\n  \"dataNascimento\": \"1987-05-11T22:06:55.828Z\",\r\n  \"sexo\": \"F\",\r\n  \"turmaId\": 0,\r\n  \"totalFaltas\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7188/api/turmas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7188",
+					"path": [
+						"api",
+						"turmas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Substituir Aluno",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"id\": 1,\r\n  \"nome\": \"José Carlos\",\r\n  \"dataNascimento\": \"1980-10-28T22:06:55.828Z\",\r\n  \"sexo\": \"M\",\r\n  \"turmaId\": 0,\r\n  \"totalFaltas\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7188/api/aluno/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7188",
+					"path": [
+						"api",
+						"aluno",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Substituir turma",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"nome\": \"Tammy Trevisan Branco\",\r\n  \"ativo\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7188/api/turma/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7188",
+					"path": [
+						"api",
+						"turma",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
